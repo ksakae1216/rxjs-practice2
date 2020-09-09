@@ -3,9 +3,20 @@ import { CommonModule } from '@angular/common';
 
 import { TodoRoutingModule } from './todo-routing.module';
 import { TodoComponent } from './containers/todo/todo.component';
+import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TodoListItemComponent } from './components/todo-list-item/todo-list-item.component';
+import { TodoFormComponent } from './components/todo-form/todo-form.component';
+
+export interface Todo {
+  id: number;
+  text: string;
+  checked: boolean;
+  createdAt: number;
+  updatedAt: number;
+}
 
 @NgModule({
-  declarations: [TodoComponent],
+  declarations: [TodoComponent, TodoListComponent, TodoListItemComponent, TodoFormComponent],
   imports: [
     CommonModule,
     TodoRoutingModule
